@@ -69,6 +69,7 @@ nav a:hover::after {
 nav a:hover {
   color: #00d4ff;
 }
+
 /* ---------------- PAGE WRAPPERS ---------------- */
 .page {
   display: none;
@@ -104,7 +105,6 @@ nav a:hover {
 #home {
   position: relative;
   background-image: url(home_background.webp);
-
 }
 
 #home .intro {
@@ -161,12 +161,12 @@ nav a:hover {
   background: whitesmoke;
   color: black;
   transform: scale(1.05);
-  box-shadow: 0 8px 20px black(0,212,255,0.5);
+  box-shadow: 0 8px 20px rgba(0,212,255,0.5);
 }
 
 /* ---------------- ABOUT PAGE ---------------- */
 #about {
-  background-image:  url(contact.webp);
+  background-image: url(contact.webp);
 }
 
 #about .intro {
@@ -196,160 +196,95 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 1024px){
-  #home .intro h1, #about .intro h1 {
-    font-size: 38px;
-  }
-  #home .intro h2 {
-    font-size: 48px;
-  }
-  #home .intro p, #about .intro p {
-    font-size: 18px;
-    max-width: 90%;
-  }
-  #home .buttons a, #about .buttons a {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px){
-  nav {
-    padding: 15px 20px;
-  }
-  #home .intro h1, #about .intro h1 {
-    font-size: 32px;
-  }
-  #home .intro h2 {
-    font-size: 40px;
-  }
-  #home .intro p, #about .intro p {
-    font-size: 16px;
-  }
-  #home .buttons a, #about .buttons a {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-}
-
-
-/*------------------RESUME PAGE-------------------------*/
-
-#resume{
+/* ---------------- RESUME PAGE ---------------- */
+#resume {
   background-image: url(home_background.webp);
 }
 
-/* CONTAINER & COLUMNS */
-    #resume .container {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 80px;
-    }
+#resume .container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
 
-    #resume .column {
-      flex: 1;
-      min-width: 280px;
-      max-height: fit-content;
-      background: rgba(0,0,0,0.35);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 30px 25px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeUp 1s forwards;
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
+#resume .column {
+  flex: 1;
+  min-width: 280px;
+  max-height: fit-content;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
 
-    #resume .column:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    }
+#resume .column:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
 
-    #resume .column:nth-child(1) { animation-delay: 0.2s; }
-    #resume .column:nth-child(2) { animation-delay: 0.5s; }
-    #resume .column:nth-child(3) { animation-delay: 0.8s; }
+#resume .column:nth-child(1) { animation-delay: 0.2s; }
+#resume .column:nth-child(2) { animation-delay: 0.5s; }
+#resume .column:nth-child(3) { animation-delay: 0.8s; }
 
-    /* HEADINGS & ICONS */
-    #resume .column h2 {
-      font-size: 24px;
-      color: #fff;
-      margin-bottom: 30px;
-      max-height: fit-content;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+#resume .column h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-    #resume .column h4 {
-      font-size: 18px;
-      color: #fff;
-      margin: 20px 0 5px 0;
-    }
+#resume .column h4 {
+  font-size: 18px;
+  color: #fff;
+  margin: 20px 0 5px 0;
+}
 
-    #resume .column h4 span {
-      color: #00d4ff;
-      font-weight: bold;
-    }
+#resume .column h4 span {
+  color: #00d4ff;
+  font-weight: bold;
+}
 
-    /* PARAGRAPHS / TAGS */
-    #resume .column p {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
-      font-size: 16px;
-      font-weight: 500;
-      transition: transform 0.3s;
-    }
+#resume .column p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
 
-    #resume .column p i {
-      font-size: 18px;
-    }
+#resume .column p i {
+  font-size: 18px;
+}
 
-    #resume .column p:hover {
-      transform: scale(1.05);
-    }
+#resume .column p:hover {
+  transform: scale(1.05);
+}
 
-    /* BLOCK SPACING */
-    #resume .column .block {
-      margin-bottom: 80px;
-    }
+#resume .column .block {
+  margin-bottom: 80px;
+}
 
-    /* ANIMATION */
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* RESPONSIVE */
-    @media (max-width: 992px) {
-      #resume .container {
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      #resume .container {
-        flex-direction: column;
-      }
-    }
-
-
-
-    /*<!------------------CONTACT PAGE CSS------------------------>*/
-
-    #contact{
-      background-image: url(home_background.webp
-      );
-    }
-
-    /* CONTACT SECTION */
+/* ---------------- CONTACT PAGE ---------------- */
 #contact {
+  background-image: url(home_background.webp);
   position: relative;
   padding: 50px 20px;
   border-radius: 20px;
@@ -379,7 +314,6 @@ nav a:hover {
   text-decoration-color: #00d4ff;
 }
 
-/* CONTACT CONTAINER */
 #contact .contact-container {
   position: relative;
   z-index: 2;
@@ -389,7 +323,6 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-/* CONTACT FORM */
 #contact .contact-form {
   flex: 1;
   min-width: 300px;
@@ -410,7 +343,7 @@ nav a:hover {
   margin-bottom: 20px;
   font-size: 25px;
   font-weight: bolder;
-  letter-spacing: 1px;;
+  letter-spacing: 1px;
 }
 
 #contact .contact-form input,
@@ -454,7 +387,6 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* CONTACT INFO */
 #contact .contact-info {
   flex: 1;
   min-width: 250px;
@@ -491,7 +423,6 @@ nav a:hover {
   color: white;
   font-size: larger;
   transition: transform 0.3s;
-
 }
 
 #contact .contact-info p:hover i {
@@ -509,7 +440,6 @@ nav a:hover {
   transition:0.3s;
 }
 
-/* SOCIAL MEDIA */
 #contact .social-media {
   display: flex;
   gap: 15px;
@@ -527,7 +457,7 @@ nav a:hover {
   color: #00d4ff;
 }
 
-/* ANIMATIONS */
+/* ---------------- ANIMATIONS ---------------- */
 @keyframes fadeLeft {
   0% {opacity:0; transform: translateX(-50px);}
   100% {opacity:1; transform: translateX(0);}
@@ -543,11 +473,127 @@ nav a:hover {
   100% {opacity:1; transform: translateY(0);}
 }
 
-/* RESPONSIVE */
-@media (max-width:768px){
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Desktop/Tablet adjustments */
+@media (max-width: 1024px){
+  #home .intro h1, #about .intro h1 {
+    font-size: 38px;
+  }
+  #home .intro h2 {
+    font-size: 48px;
+  }
+  #home .intro p, #about .intro p {
+    font-size: 18px;
+    max-width: 90%;
+  }
+  #home .buttons a, #about .buttons a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  #resume .container {
+    gap: 20px;
+  }
+}
+
+/* Tablet/Small Laptop */
+@media (max-width: 992px){
+  #resume .container {
+    gap: 20px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px){
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  #home .intro,
+  #about .intro {
+    left: 5%;
+    top: 45%;
+  }
+
+  #home .intro h1, #about .intro h1 {
+    font-size: 32px;
+  }
+  #home .intro h2 {
+    font-size: 40px;
+  }
+  #home .intro p, #about .intro p {
+    font-size: 16px;
+  }
+  #home .buttons a, #about .buttons a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #resume .container {
+    flex-direction: column;
+  }
+
+  #resume .column {
+    padding: 20px;
+  }
+
+  #resume .column h2 {
+    font-size: 20px;
+  }
+
+  #resume .column h4 {
+    font-size: 16px;
+  }
+
+  #resume .column p {
+    font-size: 14px;
+  }
+
   .contact-container {
     flex-direction: column;
     gap: 30px;
   }
+
+  #contact .contact-form, #contact .contact-info {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  #contact .contact-title {
+    font-size: 28px;
+  }
+
+  #contact .contact-form h3, #contact .contact-info h3 {
+    font-size: 22px;
+  }
+
+  #contact .contact-form input,
+  #contact .contact-form textarea,
+  #contact .contact-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Containers max width */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
