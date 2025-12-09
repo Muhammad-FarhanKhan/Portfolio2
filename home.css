@@ -597,3 +597,40 @@ img {
   max-width: 1200px;
   margin: auto;
 }
+
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* hide links initially */
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(20,20,20,0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+
+  .nav-links.active {
+    display: flex; /* show menu when clicked */
+  }
+}

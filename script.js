@@ -8,3 +8,10 @@ document.getElementById("sendMessage").addEventListener("click", function(){
         document.querySelector("form").reset();
     },500);
 });
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
